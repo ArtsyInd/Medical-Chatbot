@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ICD Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .chatbot-container {
+            width: 400px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .messages {
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 300px;
+            overflow-y: scroll;
+            background-color: white;
+            color: black;
+        }
+        .input-area {
+            display: flex;
+            margin-top: 10px;
+        }
+        .input-area input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .input-area button {
+            padding: 10px;
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        .input-area button:hover {
+            background-color: #007acc;
+        }
+        .message {
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        .message.user {
+            text-align: right;
+            color: #00aaff;
+        }
+        .message.bot {
+            text-align: left;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbot-container">
+        <div id="root"></div>
+    </div>
+    <script type="module">
+        import { render } from "https://unpkg.com/reactpy@latest/web.js";
+        import Chatbot from "/static/chatbot.js";
+        render(Chatbot, document.getElementById("root"));
+    </script>
+</body>
+</html>
