@@ -38,8 +38,8 @@ Please note that **the datasets used for model training and evaluation have not 
 
 1. Clone the repository:
     ```bash
-    git clone <repo_url>
-    cd <repo_name>
+    git clone git@github.com:ArtsyInd/Medical-Chatbot.git
+    cd Medical-Chatbot
     ```
 
 2. Install required packages:
